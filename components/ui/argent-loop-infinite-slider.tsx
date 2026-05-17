@@ -89,7 +89,7 @@ export function Component({ role = "Controladores" }: { role?: string }) {
 
   const projectsRef = React.useRef<Map<number, HTMLDivElement>>(new Map());
   const minimapRef = React.useRef<Map<number, HTMLDivElement>>(new Map());
-  const requestRef = React.useRef<number>();
+  const requestRef = React.useRef<number | null>(null);
   const renderedRange = React.useRef({ min: -CONFIG.BUFFER_SIZE, max: CONFIG.BUFFER_SIZE });
 
   React.useEffect(() => {
